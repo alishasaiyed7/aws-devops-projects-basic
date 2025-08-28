@@ -20,9 +20,11 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
+        working-directory: prj4
         run: npm install
 
       - name: Run Tests
+        working-directory: prj4
         run: npm test
 
   deploy:
