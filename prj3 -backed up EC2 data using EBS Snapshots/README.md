@@ -142,7 +142,8 @@ Disaster Recovery Practices
 Created an additional EBS volume and stored data
 Took a snapshot backup of the volume
 Restored snashot to another instance successfully
-
 Learned how to export snapshots to S3 for long-term backup
----
+
+## Author
+Alisha Saiyed - System aadmin/AWS
 
