@@ -163,10 +163,39 @@ terraform apply -auto-approve
 Check EC2 in AWS console → copy the public IP
 Check S3 bucket in AWS console
 Access the Node.js app via the EC2 Public IP
+```bash
+http://yourpublicIp:3000
+```
 
 ### 8️⃣ Destroy Infrastructure (optional)
 ```bash
 terraform destroy -auto-approve
+```
+
+
+## Note 
+
+This project has a clone of MOngoo DB app so if you face any issue Please make bwlow changes
+
+1. logging to your EC2 -> cd /home/ubuntu -> cd user-app-nodejs ->cd logger
+   sudo Chmod +777 logger.js and then comment everything in the file
+2. sudo +777 server.js (if not there create a file )
+     ``bash
+
+   const app = require('./app');  // your exported app
+const port = process.env.PORT || 3000;
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
+});
+
+   ```
+
+Then run your app via PM2:
+```bash
+pm2 start server.js --name app
+pm2 save
+pm2 startup systemd -u ubuntu --hp /home/ubuntu
 ```
 
 ## ✅ Key Learning
