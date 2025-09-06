@@ -37,18 +37,19 @@ sudo systemctl start apache2
 systemctl status apache2
 ```
 
-Accessed demo page via: http://<EC2-public-ip>
+Accessed demo page via:
+```bash
+http://<EC2-public-ip>
+```
 
 **🛠️ Skills Learned**
 
 AWS EC2 basics (launch, connect, manage instances)
 
 Linux command line
-
 Security Groups & Key Pairs
-
 Apache Web Server setup
-
 Cloud Networking fundamentals
 
 =======
+
