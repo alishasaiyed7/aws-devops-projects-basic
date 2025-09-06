@@ -180,7 +180,7 @@ This project has a clone of MOngoo DB app so if you face any issue Please make b
 1. logging to your EC2 -> cd /home/ubuntu -> cd user-app-nodejs ->cd logger
    sudo Chmod +777 logger.js and then comment everything in the file
 2. sudo +777 server.js (if not there create a file )
-     ``bash
+     ```bash
 
    const app = require('./app');  // your exported app
 const port = process.env.PORT || 3000;
